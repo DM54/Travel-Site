@@ -11585,6 +11585,7 @@ function () {
   function stickyHeader() {
     _classCallCheck(this, stickyHeader);
 
+    this.lazyImages = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".lazyload");
     this.siteHeader = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".site-header");
     this.headerTriggerElement = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".large-hero__title");
     this.createHeaderWaypoint();
@@ -11592,9 +11593,17 @@ function () {
     this.headerLinks = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".primary-nav a");
     this.createPageSectionWaypoint();
     this.addSmoothScrolling();
+    this.refreshWaypoints();
   }
 
   _createClass(stickyHeader, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.resfreshAll();
+      });
+    }
+  }, {
     key: "addSmoothScrolling",
     value: function addSmoothScrolling() {
       this.headerLinks.smoothScroll();

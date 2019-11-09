@@ -568,12 +568,11 @@ color: #FFF;
 }
 
 @media(min-width: 1010px){
-
-.page-section--testimonials{
-	background: url('../../assets/images/testimonials-bg.jpg') /*('/assets/images/testimonials-bg.jpg')*/ top center no-repeat;
-	background-size: cover /*it is covering the whole thing that
-	is in the div testimonials*/
-}
+	  .page-section--testimonials.lazyloaded{
+	  	background: url('../../assets/images/testimonials-bg.jpg') /*('/assets/images/testimonials-bg.jpg')*/ top center no-repeat;
+		background-size: cover; /*it is covering the whole thing that
+	is in the div testimonials*/ 
+	  }
 	}
 
 .page-section--no-b-padding-until-medium{
