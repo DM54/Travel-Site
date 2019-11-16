@@ -1,14 +1,19 @@
-var path = require('path');
+const path = require('path');
 
 module.exports={
 	entry: {
       App: "./app/assets/scripts/App.js",
       Vendor: "./app/assets/scripts/Vendor.js"
   },
-	output: {
+  output:{
+    filename:'bundled.js',
+    path: path.resolve(__dirname, 'app')
+  },
+   mode: 'development',
+	/*output: {
 		path: path.resolve(__dirname, "./app/temp/scripts" ),
 		filename: "[name].js"
-	},
+	},*/
 	module: {
   rules: [
     {
