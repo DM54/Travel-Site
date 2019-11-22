@@ -7,6 +7,7 @@
 	left: 0;
 	right: 0;
 	opacity: 0;
+	display: flex;
 	visibility: hidden;
 	transform: scale(1.2);
 	transition: all .3s ease-out;
@@ -19,10 +20,12 @@
 
 
 	&__inner{
-		position: absolute;
+		flex: 1;
+		margin: auto;
+		/*position: absolute;
 		width: 100%;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translateY(-50%);*/
 	}
 
 	&__description{
